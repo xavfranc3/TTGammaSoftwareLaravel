@@ -1,7 +1,12 @@
 
 <h1>Exemple d'importeur de fichier XLSX</h1>
 
-Librairie utilisée pour parser le fichier Xlsx: https://github.com/shuchkin/simplexlsx 
+Librairie utilisée pour parser le fichier Xlsx: https://github.com/shuchkin/simplexlsx
+
+Générer les dépendances après clone du repository:
+```bash
+composer install
+```
 
 Créer la base de données:
 ```bash
