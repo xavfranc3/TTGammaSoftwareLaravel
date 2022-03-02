@@ -9,7 +9,6 @@ class XlsxImportService {
 
     public function insertInDb($file) {
         $data = $this->excelImport($file);
-        print_r($data);
         foreach ($data as $bandData) {
             $band = new Band([
                 'name'=> ($bandData['Nom du groupe']),
@@ -37,7 +36,6 @@ class XlsxImportService {
                 }
                 $rows[] = array_combine($columnNames, $rowCell);
             }
-            print_r($rows);
             return $rows;
         }
     }

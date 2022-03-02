@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\XlsxController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -18,4 +19,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('excel-download', [\App\Http\Controllers\XlsxController::class, 'uploadXlsx']);
+Route::post('excel-download', [XlsxController::class, 'uploadXlsx'])->name('file.upload');
