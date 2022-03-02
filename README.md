@@ -8,6 +8,11 @@ Générer les dépendances après clone du repository:
 composer install
 ```
 
+Charger les variables d'environnement:
+```bash
+cp .env.example .env
+```
+
 Créer la base de données:
 ```bash
 touch database/database.sqlite
