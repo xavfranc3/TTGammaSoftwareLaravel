@@ -11,6 +11,9 @@ class XlsxController extends Controller
 {
     public function uploadXlsx(Request $request)
     {
+        $this->validate($request, [
+            'file' => 'file|mimes:xlsx'
+        ]);
         $file = $request->file('file');
         $importer = new XlsxImportService();
         try {
